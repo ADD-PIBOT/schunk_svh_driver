@@ -1,5 +1,5 @@
 <launch>
-  <arg name="simulation" default="False"/>
+  <arg name="simulation" default="true"/>
   <arg name="serial_device" default="/dev/ttyUSB0"/>
   <arg name="name_prefix" default="left_hand"/>
 

@@ -1,6 +1,10 @@
 # Schunk SVH driver
 [![Build Status](https://travis-ci.org/fzi-forschungszentrum-informatik/schunk_svh_driver.svg?branch=master)](https://travis-ci.org/fzi-forschungszentrum-informatik/schunk_svh_driver)
 
+
+## This is modified version of Schunk SVH driver from fzi-forschungszentrum-informatik for improve capability for ROS Melodic
+### Modifier: Sungjae Min, sungjae_min@kaist.ac.kr
+
 This is the driver package for the SCHUNK SVH Five-Finger-Hand.
 It was developed on behalf of SCHUNK Mobile Greifsysteme GmbH, Lauffen/Neckar, Germany
 at the FZI Research Center for Information Technology in Karlsruhe, Germany.

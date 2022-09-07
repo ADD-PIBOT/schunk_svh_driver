@@ -3,7 +3,7 @@ rostopic pub /svh_controller/channel_targets sensor_msgs/JointState "header:
   seq: 0
   stamp: {secs: 0, nsecs: 0}
   frame_id: ''
-name: ['Index_Finger_Proximal','Index_Finger_Distal','Middle_Finger_Proximal','Middle_Finger_Distal','Ring_Finger','Pinky','Finger_Spread','Thumb_Flexion']
+name: ['right_hand_Index_Finger_Proximal','right_hand_Index_Finger_Distal','right_hand_Middle_Finger_Proximal','right_hand_Middle_Finger_Distal','right_hand_Ring_Finger','right_hand_Pinky','right_hand_Finger_Spread','right_hand_Thumb_Flexion']
 position: [0.8,1.3,0.8,1.3,0.9,0.9,0.5,0.3]
 velocity: [0,0,0,0,0,0,0,0]
 effort: [0,0,0,0,0,0,0,0]" 
@@ -13,7 +13,7 @@ rostopic pub /svh_controller/channel_targets sensor_msgs/JointState "header:
   seq: 0
   stamp: {secs: 0, nsecs: 0}
   frame_id: ''
-name: ['Index_Finger_Proximal','Index_Finger_Distal','Middle_Finger_Proximal','Middle_Finger_Distal','Ring_Finger','Pinky','Finger_Spread','Thumb_Flexion']
+name: ['right_hand_Index_Finger_Proximal','right_hand_Index_Finger_Distal','right_hand_Middle_Finger_Proximal','right_hand_Middle_Finger_Distal','right_hand_Ring_Finger','right_hand_Pinky','right_hand_Finger_Spread','right_hand_Thumb_Flexion']
 position: [0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0]
 velocity: [0,0,0,0,0,0,0,0]
 effort: [0,0,0,0,0,0,0,0]"
@@ -23,7 +23,7 @@ rostopic pub /svh_controller/channel_targets sensor_msgs/JointState "header:
   seq: 0
   stamp: {secs: 0, nsecs: 0}
   frame_id: ''
-name: ['Index_Finger_Proximal','Index_Finger_Distal','Middle_Finger_Proximal','Middle_Finger_Distal','Ring_Finger','Pinky','Finger_Spread','Thumb_Flexion','Thumb_Opposition']
+name: ['right_hand_Index_Finger_Proximal','right_hand_Index_Finger_Distal','right_hand_Middle_Finger_Proximal','right_hand_Middle_Finger_Distal','right_hand_Ring_Finger','right_hand_Pinky','right_hand_Finger_Spread','right_hand_Thumb_Flexion']
 position: [0.8,1.3,0.8,1.3,0.9,0.9,0.5,0.3,0.1]
 velocity: [0,0,0,0,0,0,0,0,0]
 effort: [0,0,0,0,0,0,0,0,0]"
@@ -33,7 +33,7 @@ rostopic pub /svh_controller/channel_targets sensor_msgs/JointState "header:
   seq: 0
   stamp: {secs: 0, nsecs: 0}
   frame_id: ''
-name: ['Index_Finger_Proximal','Index_Finger_Distal','Middle_Finger_Proximal','Middle_Finger_Distal','Ring_Finger','Pinky','Finger_Spread','Thumb_Flexion','Thumb_Opposition']
+name: ['right_hand_Index_Finger_Proximal','right_hand_Index_Finger_Distal','right_hand_Middle_Finger_Proximal','right_hand_Middle_Finger_Distal','right_hand_Ring_Finger','right_hand_Pinky','right_hand_Finger_Spread','right_hand_Thumb_Flexion']
 position: [0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0]
 velocity: [0,0,0,0,0,0,0,0,0]
 effort: [0,0,0,0,0,0,0,0,0]"

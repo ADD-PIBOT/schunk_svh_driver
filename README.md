@@ -34,6 +34,7 @@ See license folder for the license texts.
 
 ## Change log
 ### at fzi_icl_core/src/icl_core/ts/icl_core_config/ts_main.cpp
+### at fzi_icl_core/src/icl_core/ts/icl_core_thread/ts_main.cpp
 Comment out 
 
     BOOST_GLOBAL_FIXTURE(GlobalFixture)
@@ -68,3 +69,26 @@ to
 
     #include <boost/bind.hpp>
 
+## Fixing count received packet error
+### at schunk_svh_driver/src/driver_svh/src/driver_svh/SVHReceiveThread.cpp
+#### in function bool SVHReceiveThread::receiveData()
+Add type conversion at m_serial_device->Read(&data_byte, sizeof(uint8_t))
+from
+
+    int bytes = m_serial_device->Read(&data_byte, sizeof(uint8_t));
+
+to
+
+    int bytes = (int)m_serial_device->Read(&data_byte, sizeof(uint8_t));
+
+
+
+## Hardware version enablement
+### at schunk_svh_driver/etc/controller_user.yaml
+Add hardware version 2.3
+
+    parameter set: {
+        major_version: 2,
+        minor_version: 3,
+    ...
+    }

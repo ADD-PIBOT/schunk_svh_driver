@@ -32,6 +32,7 @@
 
 #include <icl_comm/ByteOrderConversion.h>
 #include <boost/bind.hpp> // MSJ
+//#include <boost/bind/bind.hpp>
 
 using icl_core::TimeSpan;
 using icl_comm::serial::SerialFlags;
@@ -72,7 +73,6 @@ bool SVHSerialInterface::connect(const std::string &dev_name)
     LOGGING_ERROR_C(DriverSVH, SVHSerialInterface, "Could not create serial device handle: " << dev_name.c_str() << endl);
     return false;
   }
-
   // create receive thread
   m_receive_thread.reset(new SVHReceiveThread(TimeSpan(0, 500000), m_serial_device, boost::bind(&SVHSerialInterface::receivedPacketCallback,this,_1,_2)));
 
@@ -93,7 +93,6 @@ bool SVHSerialInterface::connect(const std::string &dev_name)
 
   m_connected = true;
   LOGGING_TRACE_C(DriverSVH, SVHSerialInterface, "Serial device  " << dev_name.c_str()  << " opened and receive thread started. Communication can now begin." << endl);
-
   return true;
 }
 

@@ -65,7 +65,7 @@ SVHNode::SVHNode(const ros::NodeHandle& nh)
     nh.getParam("disable_flags", disable_flags);
     nh.param<int>("reset_timeout", reset_timeout, 5);
     nh.getParam("logging_config", logging_config_file);
-    nh.param<std::string>("name_prefix", name_prefix, "left_hand");
+    nh.param<std::string>("name_prefix", name_prefix, "right_hand");
     nh.param<int>("connect_retry_count", connect_retry_count, 3);
     nh.getParam("VERSIONS_PARAMETERS", dynamic_parameters);
     nh.param<int>("use_major_version", manual_major_version_int, 0);

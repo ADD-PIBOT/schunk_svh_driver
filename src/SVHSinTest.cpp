@@ -43,7 +43,7 @@
 
 // Consts
 // Loop Rate (i.e Frequency) of the ROS node -> 50 = 50HZ
-double loop_rate = 50;
+double loop_rate = 100;
 // Time of a half Sin. i.e. 10 = In 10 Seconds the selected fingers will perform a close and open
 // (Sin to 1PI)
 double sin_duration = 10;
@@ -84,7 +84,7 @@ int main(int argc, char** argv)
 
   try
   {
-    nh.param<std::string>("name_prefix", name_prefix, "left_hand");
+    nh.param<std::string>("name_prefix", name_prefix, "right_hand");
   }
   catch (ros::InvalidNameException e)
   {

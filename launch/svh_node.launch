@@ -6,7 +6,7 @@
   <arg name="use_internal_logging" default="False"/>
   <arg name="controller_config" default="$(find schunk_svh_driver)/etc/controller_user.yaml" />
   <arg name="general_config" default="$(find schunk_svh_driver)/etc/svh.yaml" />
-  <arg name="name_prefix" default="left_hand" />
+  <arg name="name_prefix" default="right_hand" />
 
   <!-- load basic configuration -->
   <rosparam file="$(arg general_config)" command="load" ns="svh_controller"/>

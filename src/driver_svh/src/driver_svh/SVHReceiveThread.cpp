@@ -91,7 +91,8 @@ bool SVHReceiveThread::receiveData()
    *        and all data fields present.
    */
   uint8_t data_byte;
-  int bytes = m_serial_device->Read(&data_byte, sizeof(uint8_t));
+  // unsigned char data_byte;
+  int bytes = (int)m_serial_device->Read(&data_byte, sizeof(uint8_t));
   if (bytes < 0)
   {
     LOGGING_TRACE_C(DriverSVH, SVHReceiveThread, "Serial read error:" << bytes << endl );

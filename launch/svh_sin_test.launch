@@ -1,7 +1,7 @@
 <launch>
-  <arg name="simulation" default="true"/>
+  <arg name="simulation" default="false"/>
   <arg name="serial_device" default="/dev/ttyUSB0"/>
-  <arg name="name_prefix" default="left_hand"/>
+  <arg name="name_prefix" default="right_hand"/>
 
   <include file="$(find schunk_svh_driver)/launch/svh_controller.launch">
     <arg name="standalone" value="False" />

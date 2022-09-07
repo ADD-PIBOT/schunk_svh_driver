@@ -33,8 +33,7 @@ See license folder for the license texts.
 ### Upper information are given from original fzi-forschungszentrum-informatik/schunk_svh_driver
 
 ## Change log
-### at fzi_icl_core/src/icl_core/ts/icl_core_config/ts_main.cpp
-### at fzi_icl_core/src/icl_core/ts/icl_core_thread/ts_main.cpp
+### at fzi_icl_core/src/icl_core/ts/icl_core_config/ts_main.cpp and fzi_icl_core/src/icl_core/ts/icl_core_thread/ts_main.cpp
 Comment out 
 
     BOOST_GLOBAL_FIXTURE(GlobalFixture)

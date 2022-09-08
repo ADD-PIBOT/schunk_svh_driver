@@ -71,7 +71,7 @@ to
 ## Fixing count received packet error
 ### at schunk_svh_driver/src/driver_svh/src/driver_svh/SVHReceiveThread.cpp
 #### in function bool SVHReceiveThread::receiveData()
-Add force type conversion at m_serial_device->Read(&data_byte, sizeof(uint8_t))
+Add force type casting at m_serial_device->Read(&data_byte, sizeof(uint8_t))
 from
 
     int bytes = m_serial_device->Read(&data_byte, sizeof(uint8_t));

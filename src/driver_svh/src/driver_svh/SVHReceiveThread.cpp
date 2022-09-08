@@ -101,7 +101,7 @@ bool SVHReceiveThread::receiveData()
   if (bytes < 1)
   {
     return false;
-  }
+  }int bytes = (int)m_serial_device->Read(&data_byte, sizeof(uint8_t));
 
   switch (m_received_state)
   {

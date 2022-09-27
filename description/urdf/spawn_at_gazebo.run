@@ -1,1 +1,1 @@
-rosrun gazebo_ros spawn_model -file `rospack find schunk_svh_driver`/description/urdf/svh.urdf -urdf -z 1 -model svh
+rosrun gazebo_ros spawn_model -file `rospack find schunk_svh_description`/urdf/svh.urdf -urdf -z 1 -model svh

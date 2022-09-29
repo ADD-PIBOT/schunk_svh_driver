@@ -46,7 +46,7 @@ to
 ### at fzi_icl_core/src/icl_core/ts/icl_core_thread/ts_PeriodicThread.cpp
 Define substitute definition
 
-    #define BOOT_MESSAGE(M) BOOST_TEST_MESSAGE(M)
+    #define BOOST_MESSAGE(M) BOOST_TEST_MESSAGE(M)
 
 
 ### at schunk_svh_driver/src/driver_svh/src/driver_svh/SVHController.cpp

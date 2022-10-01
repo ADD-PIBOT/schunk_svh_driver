@@ -43,6 +43,8 @@
 #include <driver_svh/SVHPositionSettings.h>
 #include <driver_svh/SVHCurrentSettings.h>
 
+#include <schunk_svh_driver/SVH_Hand_Mission.h>
+
 #include <boost/shared_ptr.hpp>
 
 class SVHNode{
@@ -71,6 +73,14 @@ public:
   //! Callback function for setting channel target positions to SCHUNK five finger hand
   void jointStateCallback(const sensor_msgs::JointStateConstPtr& input);
 
+  bool hand_mission_server(schunk_svh_driver::SVH_Hand_Mission::Request &req,
+                           schunk_svh_driver::SVH_Hand_Mission::Response &res);
+
+  // void mission_callback(const std_msgs::String &msg);
+  // ros::Publisher channel_pos_pub;
+  // ros::Subscriber mission_sub;
+
+
   //!
   //! \brief SVHNode::getChannelFeedback Gets the latest received positions and efforts from the driver
   //! \returns The current joint states (Position and Efforts)
@@ -83,7 +93,7 @@ public:
   //!
   std_msgs::Float64MultiArray getChannelCurrents();
 
-
+  
 private:
   //! Handle to the SVH finger manager for library access
   boost::shared_ptr<driver_svh::SVHFingerManager> fm_;
@@ -102,6 +112,8 @@ private:
 
   //! Current Value message template
   std_msgs::Float64MultiArray channel_currents;
+  
+  
 };
 
 #endif // S5FH_CONTROLLER_H

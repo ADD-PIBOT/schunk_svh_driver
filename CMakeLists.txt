@@ -34,6 +34,7 @@ find_package(catkin REQUIRED COMPONENTS
     rqt_gui
     rqt_gui_py
     xacro
+    message_generation
 )
 
 catkin_python_setup()
@@ -43,6 +44,15 @@ generate_dynamic_reconfigure_options(
   cfg/svh.cfg
 )
 
+add_service_files(
+  FILES
+  SVH_Hand_Mission.srv
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 ###################################
 ## catkin specific configuration ##
@@ -101,9 +111,10 @@ add_executable(svh_controller
 )
 
 # Simple test programs
-add_executable(svh_sin_test
-  src/SVHSinTest.cpp
+add_executable(svh_sin_test src/SVHSinTest.cpp
 )
+
+add_executable(svh_pibot src/SVHPIBOT.cpp)
 
 
 # Add cmake target dependencies of the executable/library
@@ -131,6 +142,12 @@ add_dependencies(svh_sin_test
   driver_svh
 )
 
+add_dependencies(svh_pibot
+  icl_comm
+  icl_core
+  driver_svh
+)
+
 ## Specify libraries to link a library or executable target against
 target_link_libraries(svh_sin_test
   ${catkin_LIBRARIES}
@@ -138,6 +155,15 @@ target_link_libraries(svh_sin_test
   ${ICL_CORE_LIBRARIES}
   ${driver_svh_LIBRARIES}
 )
+
+## Specify libraries to link a library or executable target against
+target_link_libraries(svh_pibot
+  ${catkin_LIBRARIES}
+  ${ICL_COMM_LIBRARIES}
+  ${ICL_CORE_LIBRARIES}
+  ${driver_svh_LIBRARIES}
+)
+
 
 #############
 ## Install ##
@@ -149,7 +175,7 @@ install(PROGRAMS
 )
 
 # Install targets of libs and executables
-install(TARGETS svh_controller svh_sin_test
+install(TARGETS svh_controller svh_sin_test svh_pibot
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

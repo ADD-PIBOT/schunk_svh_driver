@@ -1,0 +1,17 @@
+<launch>
+  <arg name="simulation" default="false"/>
+  <arg name="serial_device" default="/dev/ttyUSB0"/>
+  <arg name="name_prefix" default="right_hand"/>
+
+  <include file="$(find schunk_svh_driver)/launch/svh_controller.launch">
+    <arg name="standalone" value="False" />
+    <arg name="simulation" value="$(arg simulation)" />
+    <arg name="serial_device" value="$(arg serial_device)" />
+  </include>
+
+  <node name="svh_pibot" pkg="schunk_svh_driver" type="svh_pibot" output="screen" >
+    <remap from="~channel_targets" to="/svh_controller/channel_targets"/>
+    <param name="name_prefix" value="$(arg name_prefix)" />
+  </node>
+  
+</launch>

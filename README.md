@@ -91,3 +91,5 @@ Add hardware version 2.3
         minor_version: 3,
     ...
     }
+
+### Some files that related to PIBOT are modified by Hyungjoo Kim and Sungjae Min from USRG KAIST

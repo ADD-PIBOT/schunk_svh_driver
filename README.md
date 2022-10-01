@@ -92,4 +92,4 @@ Add hardware version 2.3
     ...
     }
 
-### Some files that related to PIBOT are modified by Hyungjoo Kim and Sungjae Min from USRG KAIST
+### Some files that related to PIBOT are created by Hyungjoo Kim and Sungjae Min from USRG KAIST
